@@ -13,9 +13,13 @@
 		64A6416F27296C0200C45B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A6416D27296C0200C45B51 /* Main.storyboard */; };
 		64A6417127296C0500C45B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A6417027296C0500C45B51 /* Assets.xcassets */; };
 		64A6417427296C0500C45B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A6417227296C0500C45B51 /* LaunchScreen.storyboard */; };
+		64A6417C2729730700C45B51 /* sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 64A6417B2729730600C45B51 /* sample.mp4 */; };
+		994CD4D2AE93E87C9F15CB9A /* Pods_golf_pose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3FEC50FA9D86BE323CBBC2 /* Pods_golf_pose.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3FEC50FA9D86BE323CBBC2 /* Pods_golf_pose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golf_pose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4433CDE30E63E0052DB725 /* Pods-golf-pose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golf-pose.release.xcconfig"; path = "Target Support Files/Pods-golf-pose/Pods-golf-pose.release.xcconfig"; sourceTree = "<group>"; };
 		64A6416427296C0200C45B51 /* golf-pose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "golf-pose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A6416727296C0200C45B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A6416927296C0200C45B51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		64A6417027296C0500C45B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A6417327296C0500C45B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A6417527296C0500C45B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A6417B2729730600C45B51 /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.mp4; sourceTree = "<group>"; };
+		CBC2A9A5EF969DACFA8AEAF2 /* Pods-golf-pose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golf-pose.debug.xcconfig"; path = "Target Support Files/Pods-golf-pose/Pods-golf-pose.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994CD4D2AE93E87C9F15CB9A /* Pods_golf_pose.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15ADB86E4DB6A3717951CDC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B3FEC50FA9D86BE323CBBC2 /* Pods_golf_pose.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52BE67075EBDAFE4189FC665 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBC2A9A5EF969DACFA8AEAF2 /* Pods-golf-pose.debug.xcconfig */,
+				5C4433CDE30E63E0052DB725 /* Pods-golf-pose.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		64A6415B27296C0200C45B51 = {
 			isa = PBXGroup;
 			children = (
 				64A6416627296C0200C45B51 /* golf-pose */,
 				64A6416527296C0200C45B51 /* Products */,
+				52BE67075EBDAFE4189FC665 /* Pods */,
+				15ADB86E4DB6A3717951CDC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,7 @@
 				64A6416D27296C0200C45B51 /* Main.storyboard */,
 				64A6417027296C0500C45B51 /* Assets.xcassets */,
 				64A6417227296C0500C45B51 /* LaunchScreen.storyboard */,
+				64A6417B2729730600C45B51 /* sample.mp4 */,
 				64A6417527296C0500C45B51 /* Info.plist */,
 			);
 			path = "golf-pose";
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64A6417827296C0500C45B51 /* Build configuration list for PBXNativeTarget "golf-pose" */;
 			buildPhases = (
+				379AEE509AC8438EDD304E59 /* [CP] Check Pods Manifest.lock */,
 				64A6416027296C0200C45B51 /* Sources */,
 				64A6416127296C0200C45B51 /* Frameworks */,
 				64A6416227296C0200C45B51 /* Resources */,
+				B461BCB264FB32D22F2EF96A /* [CP] Embed Pods Frameworks */,
+				8380BE78E5B0E7BAEFA267F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A6417C2729730700C45B51 /* sample.mp4 in Resources */,
 				64A6417427296C0500C45B51 /* LaunchScreen.storyboard in Resources */,
 				64A6417127296C0500C45B51 /* Assets.xcassets in Resources */,
 				64A6416F27296C0200C45B51 /* Main.storyboard in Resources */,
@@ -132,6 +163,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		379AEE509AC8438EDD304E59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-golf-pose-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8380BE78E5B0E7BAEFA267F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B461BCB264FB32D22F2EF96A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golf-pose/Pods-golf-pose-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64A6416027296C0200C45B51 /* Sources */ = {
@@ -284,6 +374,7 @@
 		};
 		64A6417927296C0500C45B51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC2A9A5EF969DACFA8AEAF2 /* Pods-golf-pose.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +385,6 @@
 				INFOPLIST_FILE = "golf-pose/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +402,7 @@
 		};
 		64A6417A27296C0500C45B51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4433CDE30E63E0052DB725 /* Pods-golf-pose.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +413,6 @@
 				INFOPLIST_FILE = "golf-pose/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
