@@ -156,7 +156,7 @@ class ViewController: UIViewController {
             return (result ?? "") + "Frame\(index + 1)\n" + pose.landmarks.reduce("", { result, landmark in
                 return result + "\(landmark.type.rawValue)\nx:\(landmark.position.x)\ny:\(landmark.position.y)\nz:\(landmark.position.z)\n"
             }) + "\n\n"
-        })#imageLiteral(resourceName: "simulator_screenshot_ECA95205-0D6F-440A-9002-697366AC5110.png")
+        })
     }
 
     func imageOrientation(
