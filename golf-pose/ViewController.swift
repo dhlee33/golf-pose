@@ -23,7 +23,6 @@ class ViewController: UIViewController {
 
     private lazy var playerView = AVPlayerView().then {
         guard let path = Bundle.main.path(forResource: "sample", ofType: "mp4") else {
-            print("file not found")
             return
         }
         let asset = AVAsset(url: URL(fileURLWithPath: path))
@@ -33,6 +32,7 @@ class ViewController: UIViewController {
             $0.isMuted = true
         }
         self.playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
+        playerLooper?.disableLooping()
 
         $0.player = player
         $0.player?.play()
@@ -56,27 +56,36 @@ class ViewController: UIViewController {
             .deferred { [weak self] in
                 guard let self = self else { return .empty() }
                 let image = self.getVideoVisionImage()
-                return .just(self.detectPose(visionImage: image, mode: .stream))
+                return .just(nil)
             }
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
-            .take(1)
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] text in
-                self?.videoResultlabel.text = text
-            })
+            .subscribe()
 
-        _ = Observable<String?>
-            .deferred { [weak self] in
-                guard let self = self else { return .empty() }
-                let image = self.getImageVisionImage()
-                return .just(self.detectPose(visionImage: image, mode: .singleImage))
-            }
-            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
-            .take(1)
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] text in
-                self?.imageResultlabel.text = text
-            })
+//        _ = Observable<String?>
+//            .deferred { [weak self] in
+//                guard let self = self else { return .empty() }
+//                let image = self.getVideoVisionImage()
+//                return .just(self.detectPose(visionImage: image, mode: .stream))
+//            }
+//            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+//            .take(1)
+//            .observe(on: MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] text in
+//                self?.videoResultlabel.text = text
+//            })
+
+//        _ = Observable<String?>
+//            .deferred { [weak self] in
+//                guard let self = self else { return .empty() }
+//                let image = self.getImageVisionImage()
+//                return .just(self.detectPose(visionImage: image, mode: .singleImage))
+//            }
+//            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+//            .take(1)
+//            .observe(on: MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] text in
+//                self?.imageResultlabel.text = text
+//            })
     }
 
     init() {
@@ -94,7 +103,6 @@ class ViewController: UIViewController {
 
     private func getVideoVisionImage() -> VisionImage? {
         guard let path = Bundle.main.path(forResource: "sample", ofType: "mp4") else {
-            print("file not found")
             return nil
         }
         let asset = AVAsset(url: URL(fileURLWithPath: path))
@@ -122,15 +130,30 @@ class ViewController: UIViewController {
         options.detectorMode = .stream
         let poseDetector = PoseDetector.poseDetector(options: options)
 
-        let sampleImage = VisionImage(buffer: sample!)
-        return sampleImage
+        var result = "index,landmark,xPosition,yPosition,zPosition\n"
+        var index = 0
+        while sample != nil {
+            let sampleImage = VisionImage(buffer: sample!)
+            if index % 3 == 0 {
+                let csv = detectPose(index: index / 3, visionImage: sampleImage, mode: .singleImage) ?? ""
+
+                result += csv
+            }
+            index += 1
+
+            sample = trackOutput.copyNextSampleBuffer()
+        }
+
+        print(result)
+
+        return nil
 //        sampleImage.orientation = imageOrientation(
 //            deviceOrientation: UIDevice.current.orientation,
 //            cameraPosition: .back
 //        )
     }
 
-    private func detectPose(visionImage: VisionImage?, mode: PoseDetectorMode) -> String? {
+    private func detectPose(index: Int, visionImage: VisionImage?, mode: PoseDetectorMode) -> String? {
         guard let visionImage = visionImage else {
             return nil
         }
@@ -143,20 +166,13 @@ class ViewController: UIViewController {
         do {
             results = try poseDetector.results(in: visionImage)
         } catch let error {
-            print("Failed to detect pose with error: \(error.localizedDescription).")
             return nil
         }
         guard !results.isEmpty else {
-            print("Pose detector returned no results.")
             return nil
         }
 
-        return results.enumerated().reduce("", { result, enumerated in
-            let (index, pose) = enumerated
-            return (result ?? "") + "Frame\(index + 1)\n" + pose.landmarks.reduce("", { result, landmark in
-                return result + "\(landmark.type.rawValue)\nx:\(landmark.position.x)\ny:\(landmark.position.y)\nz:\(landmark.position.z)\n"
-            }) + "\n\n"
-        })
+        return results.first?.getLandMarksCSV(index: index)
     }
 
     func imageOrientation(
@@ -251,5 +267,20 @@ final class AVPlayerView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+struct LandMarkDTO: Encodable {
+    let landMark: String
+    let xPosision: Double
+    let yPosision: Double
+    let zPosision: Double
+}
+
+extension Pose {
+    func getLandMarksCSV(index: Int) -> String {
+        return landmarks.reduce("") { result, landmark in
+            result + "\(index),\(landmark.type.rawValue),\(landmark.position.x),\(landmark.position.y),\(landmark.position.z)\n"
+        }
     }
 }

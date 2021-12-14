@@ -12,5 +12,7 @@ target 'golf-pose' do
   pod 'SnapKit'
   pod 'Then'
   pod 'ReactorKit'
+  pod 'ScreenCorners'
+  pod 'RxDataSources'
 
 end

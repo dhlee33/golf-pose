@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641AED732765BD3500C9E875 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED722765BD3500C9E875 /* AnalyzeViewController.swift */; };
+		641AED752767828700C9E875 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED742767828700C9E875 /* ResultView.swift */; };
+		641AED772767959D00C9E875 /* PlayerCell.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED762767959D00C9E875 /* PlayerCell.swift.swift */; };
+		641AED792767978300C9E875 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED782767978300C9E875 /* ResultCell.swift */; };
+		641AED7C276798C700C9E875 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED7B276798C700C9E875 /* Result.swift */; };
+		641AED7E27679A2500C9E875 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED7D27679A2500C9E875 /* TitleCell.swift */; };
+		641AED8027679B3900C9E875 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AED7F27679B3900C9E875 /* ButtonCell.swift */; };
+		645D6E9A2764769500E8E02D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6E992764769500E8E02D /* MainViewController.swift */; };
+		645D6E9D27647CBA00E8E02D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6E9C27647CBA00E8E02D /* UIView+Extensions.swift */; };
+		645D6E9F27647D9400E8E02D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6E9E27647D9400E8E02D /* UIColor+Extensions.swift */; };
+		645D6EA22764889500E8E02D /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6EA12764889500E8E02D /* PoseManager.swift */; };
+		645D6EA4276493FA00E8E02D /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6EA3276493FA00E8E02D /* MainViewReactor.swift */; };
 		64A6416827296C0200C45B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416727296C0200C45B51 /* AppDelegate.swift */; };
 		64A6416A27296C0200C45B51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416927296C0200C45B51 /* SceneDelegate.swift */; };
 		64A6416C27296C0200C45B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416B27296C0200C45B51 /* ViewController.swift */; };
@@ -20,6 +32,19 @@
 /* Begin PBXFileReference section */
 		3B3FEC50FA9D86BE323CBBC2 /* Pods_golf_pose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golf_pose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4433CDE30E63E0052DB725 /* Pods-golf-pose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golf-pose.release.xcconfig"; path = "Target Support Files/Pods-golf-pose/Pods-golf-pose.release.xcconfig"; sourceTree = "<group>"; };
+		641AED722765BD3500C9E875 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
+		641AED742767828700C9E875 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		641AED762767959D00C9E875 /* PlayerCell.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift.swift; sourceTree = "<group>"; };
+		641AED782767978300C9E875 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		641AED7B276798C700C9E875 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		641AED7D27679A2500C9E875 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		641AED7F27679B3900C9E875 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		641AED812768D64700C9E875 /* sample1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample1.mp4; sourceTree = "<group>"; };
+		645D6E992764769500E8E02D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		645D6E9C27647CBA00E8E02D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		645D6E9E27647D9400E8E02D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		645D6EA12764889500E8E02D /* PoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
+		645D6EA3276493FA00E8E02D /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
 		64A6416427296C0200C45B51 /* golf-pose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "golf-pose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A6416727296C0200C45B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A6416927296C0200C45B51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +86,54 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		641AED712765BD2000C9E875 /* Analyze */ = {
+			isa = PBXGroup;
+			children = (
+				641AED722765BD3500C9E875 /* AnalyzeViewController.swift */,
+				641AED742767828700C9E875 /* ResultView.swift */,
+				641AED762767959D00C9E875 /* PlayerCell.swift.swift */,
+				641AED782767978300C9E875 /* ResultCell.swift */,
+				641AED7D27679A2500C9E875 /* TitleCell.swift */,
+				641AED7F27679B3900C9E875 /* ButtonCell.swift */,
+			);
+			path = Analyze;
+			sourceTree = "<group>";
+		};
+		641AED7A276798BD00C9E875 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				641AED812768D64700C9E875 /* sample1.mp4 */,
+				641AED7B276798C700C9E875 /* Result.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		645D6E982764768700E8E02D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				645D6E992764769500E8E02D /* MainViewController.swift */,
+				645D6EA3276493FA00E8E02D /* MainViewReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		645D6E9B27647CAE00E8E02D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				645D6E9C27647CBA00E8E02D /* UIView+Extensions.swift */,
+				645D6E9E27647D9400E8E02D /* UIColor+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		645D6EA02764887B00E8E02D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				645D6EA12764889500E8E02D /* PoseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		64A6415B27296C0200C45B51 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +155,11 @@
 		64A6416627296C0200C45B51 /* golf-pose */ = {
 			isa = PBXGroup;
 			children = (
+				641AED7A276798BD00C9E875 /* Models */,
+				641AED712765BD2000C9E875 /* Analyze */,
+				645D6EA02764887B00E8E02D /* Managers */,
+				645D6E9B27647CAE00E8E02D /* Utils */,
+				645D6E982764768700E8E02D /* Main */,
 				64A6416727296C0200C45B51 /* AppDelegate.swift */,
 				64A6416927296C0200C45B51 /* SceneDelegate.swift */,
 				64A6416B27296C0200C45B51 /* ViewController.swift */,
@@ -228,9 +306,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641AED7E27679A2500C9E875 /* TitleCell.swift in Sources */,
+				645D6EA4276493FA00E8E02D /* MainViewReactor.swift in Sources */,
+				641AED7C276798C700C9E875 /* Result.swift in Sources */,
 				64A6416C27296C0200C45B51 /* ViewController.swift in Sources */,
+				641AED792767978300C9E875 /* ResultCell.swift in Sources */,
+				645D6E9F27647D9400E8E02D /* UIColor+Extensions.swift in Sources */,
+				645D6EA22764889500E8E02D /* PoseManager.swift in Sources */,
+				645D6E9D27647CBA00E8E02D /* UIView+Extensions.swift in Sources */,
+				641AED8027679B3900C9E875 /* ButtonCell.swift in Sources */,
+				641AED732765BD3500C9E875 /* AnalyzeViewController.swift in Sources */,
 				64A6416827296C0200C45B51 /* AppDelegate.swift in Sources */,
+				641AED752767828700C9E875 /* ResultView.swift in Sources */,
 				64A6416A27296C0200C45B51 /* SceneDelegate.swift in Sources */,
+				641AED772767959D00C9E875 /* PlayerCell.swift.swift in Sources */,
+				645D6E9A2764769500E8E02D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

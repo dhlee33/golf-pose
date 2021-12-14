@@ -1,4 +1,5 @@
 PODS:
+  - Differentiator (5.0.0)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -69,9 +70,14 @@ PODS:
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
+  - ScreenCorners (1.0.1)
   - SnapKit (5.0.1)
   - Then (2.7.0)
   - WeakMapTable (1.2.0)
@@ -80,12 +86,15 @@ DEPENDENCIES:
   - GoogleMLKit/PoseDetectionAccurate (= 2.3.0)
   - ReactorKit
   - RxCocoa
+  - RxDataSources
   - RxSwift
+  - ScreenCorners
   - SnapKit
   - Then
 
 SPEC REPOS:
   trunk:
+    - Differentiator
     - GoogleDataTransport
     - GoogleMLKit
     - GoogleToolboxForMac
@@ -103,13 +112,16 @@ SPEC REPOS:
     - Protobuf
     - ReactorKit
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
+    - ScreenCorners
     - SnapKit
     - Then
     - WeakMapTable
 
 SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -127,12 +139,14 @@ SPEC CHECKSUMS:
   Protobuf: e9b99dd5da72f665ec503b19191f245a22188b4d
   ReactorKit: 5348c9881dcb546605b451e32759dccc9937d36e
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  ScreenCorners: 9bfdf033122fb645d57cc8f9df7b8ea770720771
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: ebb41a0281ce36352aa3a72c1da87b87eb801f66
+PODFILE CHECKSUM: 60e59a06e13c3ee3e69b8ebd7f70d473138b7ec7
 
 COCOAPODS: 1.9.3
