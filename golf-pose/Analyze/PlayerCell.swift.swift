@@ -49,7 +49,7 @@ final class PlayerCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setResult(url: URL, title: String, start: Double, duration: Double) {
+    func setResult(url: URL, title: String, start: Int, end: Int) {
         let asset = AVAsset(url: url)
 
         let playerItem = AVPlayerItem(asset: asset)
@@ -60,8 +60,8 @@ final class PlayerCell: UITableViewCell {
             player: player,
             templateItem: playerItem,
             timeRange: CMTimeRange(
-                start: CMTime(seconds: start, preferredTimescale: 1),
-                duration: CMTime(seconds: duration, preferredTimescale: 1)
+                start: CMTime(seconds: Double(start) / 60, preferredTimescale: 60),
+                duration: CMTime(seconds: Double(start - end) / 60, preferredTimescale: 60)
             )
         )
         playerView.player = player

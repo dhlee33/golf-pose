@@ -28,3 +28,60 @@ struct ResultDetail {
     let title: String
     let description: String
 }
+
+struct DTOResult: Decodable {
+    static let mock = DTOResult(title: "Full Swing", details: DTOResultDetail.mocks)
+
+    let title: String
+    let details: [DTOResultDetail]
+}
+
+struct DTOResultDetail: Decodable {
+    static let mocks = [
+        DTOResultDetail(title: "Back Swing", startFrame: 10, endFrame: 40, improvements: []),
+        DTOResultDetail(title: "Back Swing", startFrame: 40, endFrame: 60, improvements: []),
+        DTOResultDetail(title: "Back Swing", startFrame: 60, endFrame: 80, improvements: [])
+    ]
+    let title: String
+    let startFrame: Int
+    let endFrame: Int
+    let improvements: [Improvement]
+}
+
+enum Improvement: String, Decodable {
+    case 머리
+    case 왼쪽팔
+    case 오른쪽팔
+    case 허리
+    case 골반
+
+    var title: String {
+        switch self {
+        case .머리:
+            return "Keep your head still!!"
+        case .왼쪽팔:
+            return "Extend your left arm more!!"
+        case .오른쪽팔:
+            return "Extend your right arm more!!"
+        case .허리:
+            return "Keep your waist still!!"
+        case .골반:
+            return "Make sure to rotate your pelvis!!"
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .머리:
+            return "Your head is moving too much."
+        case .왼쪽팔:
+            return "Your left arm bent too much."
+        case .오른쪽팔:
+            return "Your right arm bent too much."
+        case .허리:
+            return "It will help you to hit a consistent shot."
+        case .골반:
+            return "It will help you to hit a consistent shot."
+        }
+    }
+}

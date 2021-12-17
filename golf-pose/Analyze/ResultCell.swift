@@ -31,8 +31,8 @@ final class ResultCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setResultDetail(_ detail: ResultDetail) {
-        resultView.titleLabel.text = detail.title
-        resultView.descriptionLabel.text = detail.description
+    func setResult(_ improvement: Improvement) {
+        resultView.titleLabel.text = improvement.title
+        resultView.descriptionLabel.text = improvement.description
     }
 }

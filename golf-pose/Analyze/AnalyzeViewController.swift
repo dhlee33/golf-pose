@@ -68,9 +68,9 @@ class AnalyzeViewController: UIViewController, View {
                   return UITableViewCell()
               }
               switch item {
-              case .detail(let detail):
+              case .detail(let improvement):
                   let cell = tableView.dequeueReusableCell(withIdentifier: ResultCell.reuseIdentifier, for: indexPath) as! ResultCell
-                  cell.setResultDetail(detail)
+                  cell.setResult(improvement)
                   return cell
               case .title(let title):
                   let cell = tableView.dequeueReusableCell(withIdentifier: TitleCell.reuseIdentifier, for: indexPath) as! TitleCell
@@ -78,7 +78,7 @@ class AnalyzeViewController: UIViewController, View {
                   return cell
               case .player(let result):
                   let cell = tableView.dequeueReusableCell(withIdentifier: PlayerCell.reuseIdentifier, for: indexPath) as! PlayerCell
-                  cell.setResult(url: self.sourceURL, title: result.title, start: result.start, duration: result.duration)
+                  cell.setResult(url: self.sourceURL, title: result.title, start: result.startFrame, duration: result.endFrame)
                   return cell
               case .button:
                   let cell = tableView.dequeueReusableCell(withIdentifier: ButtonCell.reuseIdentifier, for: indexPath)
@@ -86,11 +86,11 @@ class AnalyzeViewController: UIViewController, View {
               }
         })
 
-        Observable.just(Result.mocks)
-            .map { results in
-                var cellTypes: [CellType] = [.title("Good Full Swing!!")]
-                cellTypes += results.flatMap { result -> [CellType] in
-                    [.player(result)] + result.details.map { .detail($0) }
+        Observable.just(DTOResult.mock)
+            .map { result in
+                var cellTypes: [CellType] = [.title("Good \(result.title)!!")]
+                cellTypes += result.details.flatMap { detail -> [CellType] in
+                    [.player(detail)] + detail.improvements.map { .detail($0) }
                 }
                 cellTypes.append(.button)
                 return [Section(items: cellTypes)]
@@ -112,9 +112,9 @@ class AnalyzeViewController: UIViewController, View {
 }
 
 enum CellType {
-    case detail(ResultDetail)
+    case detail(Improvement)
     case title(String)
-    case player(Result)
+    case player(DTOResultDetail)
     case button
 }
 struct Section {
