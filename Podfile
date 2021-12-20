@@ -14,5 +14,6 @@ target 'golf-pose' do
   pod 'ReactorKit'
   pod 'ScreenCorners'
   pod 'RxDataSources'
+  pod 'TensorFlowLiteSwift'
 
 end

@@ -60,12 +60,14 @@ final class PlayerCell: UITableViewCell {
             player: player,
             templateItem: playerItem,
             timeRange: CMTimeRange(
-                start: CMTime(seconds: Double(start) / 60, preferredTimescale: 60),
-                duration: CMTime(seconds: Double(start - end) / 60, preferredTimescale: 60)
+                start: CMTime(seconds: round(10 * Double(start) / 30) / 10, preferredTimescale: 10),
+                duration: CMTime(seconds: round(10 * Double(start - end) / 30) / 10, preferredTimescale: 10)
             )
         )
-        playerView.player = player
-        playerView.player?.play()
+        playerItem.seek(to: CMTime(seconds: round(10 * Double(start) / 30) / 10, preferredTimescale: 10), completionHandler: { [playerView] _ in
+            playerView.player = player
+            player.rate = 0.3
+        })
 
         titleLabel.text = title
     }

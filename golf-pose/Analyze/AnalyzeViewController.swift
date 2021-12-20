@@ -78,7 +78,7 @@ class AnalyzeViewController: UIViewController, View {
                   return cell
               case .player(let result):
                   let cell = tableView.dequeueReusableCell(withIdentifier: PlayerCell.reuseIdentifier, for: indexPath) as! PlayerCell
-                  cell.setResult(url: self.sourceURL, title: result.title, start: result.startFrame, duration: result.endFrame)
+                  cell.setResult(url: self.sourceURL, title: result.title, start: result.startFrame, end: result.endFrame)
                   return cell
               case .button:
                   let cell = tableView.dequeueReusableCell(withIdentifier: ButtonCell.reuseIdentifier, for: indexPath)

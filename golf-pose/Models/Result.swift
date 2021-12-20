@@ -38,9 +38,9 @@ struct DTOResult: Decodable {
 
 struct DTOResultDetail: Decodable {
     static let mocks = [
-        DTOResultDetail(title: "Back Swing", startFrame: 10, endFrame: 40, improvements: []),
-        DTOResultDetail(title: "Back Swing", startFrame: 40, endFrame: 60, improvements: []),
-        DTOResultDetail(title: "Back Swing", startFrame: 60, endFrame: 80, improvements: [])
+        DTOResultDetail(title: "Back Swing", startFrame: 10, endFrame: 40, improvements: [.HEAD, .WAIST]),
+        DTOResultDetail(title: "Back Swing", startFrame: 40, endFrame: 60, improvements: [.HEAD]),
+        DTOResultDetail(title: "Back Swing", startFrame: 60, endFrame: 80, improvements: [.LEFT_ARM, .RIGHT_ARM])
     ]
     let title: String
     let startFrame: Int
@@ -49,38 +49,38 @@ struct DTOResultDetail: Decodable {
 }
 
 enum Improvement: String, Decodable {
-    case 머리
-    case 왼쪽팔
-    case 오른쪽팔
-    case 허리
-    case 골반
+    case HEAD
+    case LEFT_ARM
+    case RIGHT_ARM
+    case WAIST
+    case PELVIS
 
     var title: String {
         switch self {
-        case .머리:
+        case .HEAD:
             return "Keep your head still!!"
-        case .왼쪽팔:
+        case .LEFT_ARM:
             return "Extend your left arm more!!"
-        case .오른쪽팔:
+        case .RIGHT_ARM:
             return "Extend your right arm more!!"
-        case .허리:
+        case .WAIST:
             return "Keep your waist still!!"
-        case .골반:
+        case .PELVIS:
             return "Make sure to rotate your pelvis!!"
         }
     }
 
     var description: String {
         switch self {
-        case .머리:
+        case .HEAD:
             return "Your head is moving too much."
-        case .왼쪽팔:
+        case .LEFT_ARM:
             return "Your left arm bent too much."
-        case .오른쪽팔:
+        case .RIGHT_ARM:
             return "Your right arm bent too much."
-        case .허리:
+        case .WAIST:
             return "It will help you to hit a consistent shot."
-        case .골반:
+        case .PELVIS:
             return "It will help you to hit a consistent shot."
         }
     }

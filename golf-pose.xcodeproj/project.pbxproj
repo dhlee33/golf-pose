@@ -19,6 +19,7 @@
 		645D6E9F27647D9400E8E02D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6E9E27647D9400E8E02D /* UIColor+Extensions.swift */; };
 		645D6EA22764889500E8E02D /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6EA12764889500E8E02D /* PoseManager.swift */; };
 		645D6EA4276493FA00E8E02D /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D6EA3276493FA00E8E02D /* MainViewReactor.swift */; };
+		64952E89276C67220066D35D /* AnalyzeManager.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64952E88276C67220066D35D /* AnalyzeManager.swift.swift */; };
 		64A6416827296C0200C45B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416727296C0200C45B51 /* AppDelegate.swift */; };
 		64A6416A27296C0200C45B51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416927296C0200C45B51 /* SceneDelegate.swift */; };
 		64A6416C27296C0200C45B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6416B27296C0200C45B51 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		645D6E9E27647D9400E8E02D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		645D6EA12764889500E8E02D /* PoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
 		645D6EA3276493FA00E8E02D /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		64952E88276C67220066D35D /* AnalyzeManager.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeManager.swift.swift; sourceTree = "<group>"; };
 		64A6416427296C0200C45B51 /* golf-pose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "golf-pose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A6416727296C0200C45B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A6416927296C0200C45B51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				645D6EA12764889500E8E02D /* PoseManager.swift */,
+				64952E88276C67220066D35D /* AnalyzeManager.swift.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				64A6416A27296C0200C45B51 /* SceneDelegate.swift in Sources */,
 				641AED772767959D00C9E875 /* PlayerCell.swift.swift in Sources */,
 				645D6E9A2764769500E8E02D /* MainViewController.swift in Sources */,
+				64952E89276C67220066D35D /* AnalyzeManager.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,6 +79,13 @@ PODS:
   - RxSwift (6.1.0)
   - ScreenCorners (1.0.1)
   - SnapKit (5.0.1)
+  - TensorFlowLiteC (2.7.0):
+    - TensorFlowLiteC/Core (= 2.7.0)
+  - TensorFlowLiteC/Core (2.7.0)
+  - TensorFlowLiteSwift (2.7.0):
+    - TensorFlowLiteSwift/Core (= 2.7.0)
+  - TensorFlowLiteSwift/Core (2.7.0):
+    - TensorFlowLiteC (= 2.7.0)
   - Then (2.7.0)
   - WeakMapTable (1.2.0)
 
@@ -90,6 +97,7 @@ DEPENDENCIES:
   - RxSwift
   - ScreenCorners
   - SnapKit
+  - TensorFlowLiteSwift
   - Then
 
 SPEC REPOS:
@@ -117,6 +125,8 @@ SPEC REPOS:
     - RxSwift
     - ScreenCorners
     - SnapKit
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
     - Then
     - WeakMapTable
 
@@ -144,9 +154,11 @@ SPEC CHECKSUMS:
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   ScreenCorners: 9bfdf033122fb645d57cc8f9df7b8ea770720771
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  TensorFlowLiteC: 50d75ed3640c15dcfbaf88ca4326297b445e00a1
+  TensorFlowLiteSwift: fe99748dc3d58ae08bd2ff38658e3ade7038670f
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 60e59a06e13c3ee3e69b8ebd7f70d473138b7ec7
+PODFILE CHECKSUM: 28395cdb22a71dee3afdc625b23ee8dd65e6e3e6
 
 COCOAPODS: 1.9.3
